@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Manrope:wght@800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, #root{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(218, 23%, 16%);
+  font-family: 'Manrope';
+}
+
+.App{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: min(max(90% + 10px),80% + 800px);
+  min-height: calc(30vh + 60%);
+  background-color: hsl(217, 19%, 24%);
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+
+
+h1{
+  letter-spacing: 5px;
+  color: hsl(150, 100%, 66%);
+  font-size: 11px;
+}
+
+.desktop-div{
+  display: flex;
+}
+
+.moblie-div{
+  display: none;
+}
+
+.desktop-div, .moblie-div{
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+p{
+  color: hsl(193, 38%, 86%);
+  padding: 2rem 0;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 800;
+}
+
+
+#button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(150, 100%, 66%);
+  padding: 1rem;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -1.7rem;
+}
+
+#button:hover{
+  box-shadow: 0px 0px 35px hsl(150, 100%, 66%);
+  cursor: pointer;
+  transition: 0.15s ease-in;
+}
+
+@media (max-width: 500px) {
+  .desktop-div{
+    display: none;
+  }
+  .moblie-div{
+    display: flex;
+  }
+  /* .App{width: 350px;} */
+}
